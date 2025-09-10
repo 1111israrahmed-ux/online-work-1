@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Div Website</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+    }
+
+    /* Navbar */
+/*
+    .navbar{
+      background:#fff;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    }
+    .navbar h1{
+      font-size:1.5rem;
+      font-weight:bold;
+      color:#0f172a;
+    }
+    .navbar ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+    }
+    .navbar ul li a{
+      text-decoration:none;
+      font-size:1rem;
+      font-weight:bold;
+      color:#0f172a;
+      padding:6px 12px;
+      border-radius:6px;
+      transition:all .3s ease;
+    }
+    .navbar ul li a:hover{
+      background:#0f172a;
+      color:#fff;
+    }
+    .navbar ul li a:active{
+      background:#3b82f6;
+      color:#fff;
+    }
+*/
+      
+      
+      body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Navbar Base */
+.navbar {
+background-color: #333;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.navbar li {
+position: relative;
+}
+
+.navbar a {
+display: block;
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navbar a:hover {
+background-color: #575757;
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+display: none;
+}
+
+.menu-icon {
+display: none;
+font-size: 22px;
+color: white;
+padding: 14px 20px;
+cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.navbar ul {
+flex-direction: column;
+display: none;
+width: 100%;
+background: #333;
+}
+
+.navbar ul li {
+text-align: left;
+border-top: 1px solid #444;
+}
+
+.menu-icon {
+display: block;
+}
+
+.menu-toggle:checked + .menu-icon + ul {
+display: flex;
+}
+}
+
+.content {
+margin-top: 70px;
+padding: 20px;
+}
+
+    /* Hero Heading Section */
+    .hero{
+      background:#f1f5f9;
+      text-align:center;
+      padding:24px 20px;
+      border-bottom:3px solid white;
+            border-top:250px solid white ;
+
+    }
+    .hero h2{
+      font-size:2.2rem;
+      font-weight:bold;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      color:#475569;
+    }
+
+    /* Main container */
+    .container{
+      width:100%;
+      max-width:650px;
+      margin:40px auto;
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius:16px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
+      padding:20px;
+      height:360px; 
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      color:black;
+      transition:transform .3s;
+        display: inline;
+      clear: both;
+            
+    }
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card:nth-child(1){background:#d5bf86;}
+    .card:nth-child(2){background:#d5bf86;}
+    .card:nth-child(3){background:#d5bf86;}
+    .card:nth-child(4){background:#d5bf86;}
+    .card:nth-child(5){background:#d5bf86;}
+    .card:nth-child(6){background:#d5bf86;}
+    .card:nth-child(7){background:#d5bf86;}
+    .card:nth-child(8){background:#d5bf86;}
+    .card:nth-child(9){background:#d5bf86;}
+    .card:nth-child(10){background:#d5bf86;}
+    .card:nth-child(11){background:#d5bf86;}
+    .card:nth-child(12){background:#d5bf86;}
+    .card:nth-child(13){background:#d5bf86;}
+    .card:nth-child(14){background:#d5bf86;}
+    .card:nth-child(15){background:#d5bf86;}
+    .card:nth-child(16){background:#d5bf86;}
+    .card:nth-child(17){background:#d5bf86;}
+    .card:nth-child(18){background:#d5bf86;}
+    .card:nth-child(19){background:#d5bf86;}
+          .card:nth-child(20){background:#d5bf86;}
+
+
+
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.6rem;
+      font-weight:bold;
+    }
+    .card p{
+      font-size:1rem;
+      line-height:1.6;
+    }
+
+    /* Big Gradient Section */
+    .big-gradient{
+      margin-top:60px;
+      height:300px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff;
+      border-radius:20px 20px 0 0;
+      background:linear-gradient(90deg,#ef4444,#3b82f6,#22c55e,#eab308,#a855f7,#f97316,#14b8a6);
+    }
+
+    /* Unique Footer */
+    footer{
+      background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+      color:#fff;
+      padding:50px 20px 20px;
+    }
+    .footer-container{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+    .footer-container h3{
+      margin-bottom:15px;
+      font-size:1.3rem;
+      border-bottom:2px solid #38bdf8;
+      display:inline-block;
+      padding-bottom:5px;
+    }
+    .footer-container p, 
+    .footer-container a{
+      color:#e2e8f0;
+      font-size:.95rem;
+      line-height:1.6;
+      text-decoration:none;
+      transition:color .3s;
+    }
+    .footer-container a:hover{
+      color:#38bdf8;
+    }
+    .social-icons{
+      display:flex;
+      gap:15px;
+      margin-top:15px;
+    }
+    .social-icons a{
+      background:#334155;
+      color:#fff;
+      padding:10px;
+      border-radius:50%;
+      display:inline-block;
+      transition:background .3s;
+    }
+    .social-icons a:hover{
+      background:#38bdf8;
+    }
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,0.2);
+      font-size:.9rem;
+      color:#94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<!--
+  <nav class="navbar">
+    <h1>My Website</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Aus.html">Australia</a></li>
+<li><a href="canada.html">Canada</a></li>
+<li><a href="UK.html">UK</a></li>
+<li><a href="menu.html">Romania</a></li>
+<li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+-->
+    
+    <nav class="navbar">
+<!-- Checkbox for toggle -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰ Menu</label>
+
+<!-- Menu Items -->
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Aus.html">Australia</a></li>
+<li><a href="canada.html">Canada</a></li>
+<li><a href="UK.html">UK</a></li>
+<li><a href="romania.html">Romania</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+  <!-- Hero Heading Section -->
+  <section class="hero">
+    <h2>CANADA JOBS</h2>
+   
+  </section>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="card">
+        <p><h3>Cashier</h3>
+<b>Company:</b>Spruce Meadow Farms Ltd.<br>
+<b>Skills:</b> Customer service, cash handling, communication, teamwork<br>
+<b>Job Location:</b>  Happy Valley-Goose Bay, Newfoundland and Labrador, Canada<br>
+<b>Experience:</b> 1 year to less than 2 years<br>
+<b>Qualification:</b> High school certificate<br>
+<b>Salary:</b>b16.00 CAD per hour (≈ 31,200 CAD per year)
+<h3>Country: Canada</h3></p></div>
+    
+    
+    
+    <div class="card"><p><h3>Office Supervisor</h3>
+        <b>Company:</b>HighWay Line Trucking Ltd.<br>
+ <b>Skills:</b> Communication, teamwork, problem-solving, computer (Excel, Word, Outlook), organized, reliable, leadership<br>
+ <b>Job Location:</b> Edmonton, Alberta, Canada<br>
+ <b>Experience</b>v 1 to less than 7 months<br>
+ <b>Qualification:</b> High school certificate<br>
+ <b>Salary:</b>36.25 CAD per hour (≈ 65,000 CAD per year)<br>
+ <h3>Country: Canada</h3></p></div>
+    
+    
+    
+    <div class="card"><p><h3>Warehouse Keeper Helper</h3>
+
+<b>Company:</b>Duo CNC Machining Inc.<br>
+<b>Skills:</b> Physical strength, attention to detail, teamwork,handling heavy loads, work under pressure<br>
+<b>Job Location:</b> Langley, British Columbia, Canada<br>
+<b>Experience:</b> Some experience is helpful<br>
+<b>Qualification:</b> No certificate or diploma<br>
+<b>Salary:</b>20.50 CAD per hour (about 34,100 CAD per year)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+    <div class="card"><p><h3>Administrative Assistant
+</h3>
+
+<b>Company:</b>Canada Wide Insurance Services Inc<br>
+<b>Skills:</b>  MS Word, Excel, PowerPoint, Outlook, MS Office, organisation, communication<br>
+<b>Job Location:</b> Surrey, British Columbia, Canada<br>
+<b>Experience:</b> 1 – 2 years<br>
+<b>Qualification:</b>  High school certificate<br>
+<b>Salary:</b>27 CAD per hour (about 44,900 CAD per year)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+    <div class="card"><p><h3>Cashier
+</h3>
+
+<b>Company:</b>Patel Family And Associate Business LTD.<br>
+<b>Skills:</b>  Customer service, handling payments, cash register use<br>
+<b>Job Location:</b>Fort St. John, BC<br>
+<b>Experience:</b>  Will train<br>
+<b>Qualification:</b>  No degree, certificate or diploma<br>
+<b>Salary:</b>17.85 CAD per hour / About 29,721 CAD per year<br>
+<h3>Country: Canada</h3></p></div>
+
+
+    <div class="card"><p><h3>Cleaner
+
+</h3>
+
+<b>Company:</b>&nbsp;Longview Logistics Ltd.<br>
+<b>Skills:</b>&nbsp;Cleaning, housekeeping, sanitizing, trash removal <br>
+<b>Job Location:</b>&nbsp; Winnipeg, MB<br>
+<b>Experience:</b>&nbsp; Experience is an asset<br>
+<b>Qualification:</b> &nbsp; No degree, certificate or diploma<br>
+<b>Salary:</b>&nbsp;17.00 CAD per hour / About 30,940 CAD per year<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+
+    <div class="card"><p><h3>Gas Station Supervisor
+
+
+</h3>
+
+<b>Company:</b>&nbsp;Chevron Gas Station<br>
+<b>Skills:</b>&nbsp;Supervision, training, inventory control, cash handling, team management <br>
+<b>Job Location:</b>&nbsp;  Chilliwack, BC<br>
+<b>Experience:</b>&nbsp;  7 months to less than 1 year<br>
+<b>Qualification:</b>&nbsp;Secondary school certificate or equal<br>
+<b>Salary:</b>&nbsp;23.00 CAD per hour / About 35,880 – 53,820 CAD per year<br>
+<h3>Country: Canada</h3></p></div>
+
+
+   <div class="card"><p><h3>Accounting Technician
+
+
+</h3>
+
+<b>Company:</b>Sonray Sales Ltd.<br>
+<b>Skills:</b>Accurate, Organized, Reliable, Attention to detail<br>
+<b>Job Location:</b>North Vancouver, BC<br>
+<b>Experience:</b>1 year to less than 2 years<br>
+<b>Qualification:</b> College or diploma (1–2 years)<br>
+<b>Salary:</b>$36.60 per hour / about $57,000 per year (Canadian Dollar)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Vegetable Packer - Farm
+
+
+</h3>
+
+<b>Company:</b>KPB Gills Four Seasons Nursery Ltd<br>
+<b>Skills:</b>Packing, sorting, quality checking, field work, cleaning<br>
+<b>Job Location:</b>Abbotsford, BC, Canada<br>
+<b>Experience:</b>7 months to less than 1 year<br>
+<b>Qualification:</b>No degree, certificate or diploma required <br>
+<b>Salary:</b>$28.85 per hour (35–40 hours per week)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Electrician
+
+
+</h3>
+
+<b>Company:</b>Power Cool Electrical & Refrigeration Mech Ltd<br>
+<b>Skills:</b>Wiring, troubleshooting, electrical systems, blueprint reading, fault finding<br>
+<b>Job Location:</b>Vancouver, BC, Canada<br>
+<b>Experience:</b>2 to 3 years<br>
+<b>Qualification:</b>High school certificate <br>
+<b>Salary:</b>$36.60 per hour (about $66,600 – $76,100 per year) Canadian Dollar<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+
+<div class="card"><p><h3>Cook
+
+
+</h3>
+
+<b>Company:</b>Moxie's Grill & Bar<br>
+<b>Skills:</b>Cooking, menu planning, food safety, staff supervision, inventory management, teamwork<br>
+<b>Job Location:</b>Vancouver, BC, Canada<br>
+<b>Experience:</b>3 to 5 years<br>
+<b>Qualification:</b>High school certificate <br>
+<b>Salary:</b>$19.00 per hour (about $29,600 – $39,500 per year) Canadian Dollar<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Administrative Assistant
+
+
+</h3>
+
+<b>Company:</b>Dairy Queen Grill & Chill<br>
+<b>Skills:</b>MS Word, MS Excel, MS Outlook, scheduling, data entry, organization, communication<br>
+<b>Job Location:</b>Carleton Place, ON, Canada<br>
+<b>Experience:</b>1 to 2 years<br>
+<b>Qualification:</b>College/CEGEP <br>
+<b>Salary:</b>$36.05 per hour (about $56,000 – $65,700 per year) Canadian Dollar<br>
+<h3>Country: Canada</h3></p></div>
+
+
+<div class="card"><p><h3>Home Support Worker
+
+
+</h3>
+
+<b>Company:</b>Malwinder Singh Kharaud<br>
+<b>Skills:</b>Caregiving, cooking, cleaning, patience, dependability, flexibility, honesty<br>
+<b>Job Location:</b>Delta, BC, Canada<br>
+<b>Experience:</b>Some experience (asset)<br>
+<b>Qualification:</b>High school certificate <br>
+<b>Salary:</b>$23.00 per hour (about $47,800 per year) Canadian Dollar<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Logistics Supervisor
+
+
+</h3>
+
+<b>Company:</b>Aster Transport<br>
+<b>Skills:</b>Logistics planning, problem solving, MS Excel, MS Word, MS Outlook, MS PowerPoint<br>
+<b>Job Location:</b>Mississauga, ON, Canada<br>
+<b>Experience:</b>7 months to less than 1 year<br>
+<b>Qualification:</b>High school certificate <br>
+<b>Salary:</b>$36.00 per hour (about $65,500 per year) Canadian Dollar<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Bookkeeper
+
+
+</h3>
+
+<b>Company:</b>Primecare Pharmacy Inc.<br>
+<b>Skills:</b>Bookkeeping, accounting software, MS Excel, QuickBooks, TaxPrep<br>
+<b>Job Location:</b>Edmonton, Alberta<br>
+<b>Experience:</b>1 to less than 2 years<br>
+<b>Qualification:</b>Secondary (high) school graduation certificate <br>
+<b>Salary:</b>$30.45 per hour / 35–40 hours per week<br>
+<h3>Country: Canada</h3></p></div>
+
+
+
+<div class="card"><p><h3>Attendant For Persons With Disabilities - Home Care
+
+
+
+</h3>
+
+<b>Company:</b>Patricia Blase-Berg, Lionel Berg<br>
+<b>Skills:</b>Dependable, organized, reliable, caring<br>
+<b>Job Location:</b>Fort Frances, Ontario<br>
+<b>Experience:</b>No experience (training provided)<br>
+<b>Qualification:</b>High School Certificate or same experience <br>
+<b>Salary:</b>$25 per hour (about $48,000 per year for full-time)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+<div class="card"><p><h3>Baker
+
+
+</h3>
+
+<b>Company:</b>BAO Sandwich Bar<br>
+<b>Skills:</b> Baking, decorating, supervision, organizing, teamwork<br>
+<b>Job Location:</b> Waterloo, Ontario<br>
+<b>Experience:</b>1 to 7 months<br>
+<b>Qualification:</b>College Certificate (3 months to less than 1 year) or experience <br>
+<b>Salary:</b>$22 per hour (about $34,320 to $45,760 per year)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+<div class="card"><p><h3>Truck Dispatcher
+
+
+
+</h3>
+
+<b>Company:</b>ELRANCHO INC<br>
+<b>Skills:</b>Communication, organizing, computer use, problem solving<br>
+<b>Job Location:</b>Saint-Quentin, New Brunswick<br>
+<b>Experience:</b>1 to 7 months<br>
+<b>Qualification:</b>High School Certificate <br>
+<b>Salary:</b>$25.06 per hour (about $39,369 to $52,124 per year)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+<div class="card"><p><h3>Office Administrator
+
+
+</h3>
+
+<b>Company:</b>Ace Homes<br>
+<b>Skills:</b>Good communication, organized, reliable, attention to detail<br>
+<b>Job Location:</b>Calgary, Alberta<br>
+<b>Experience:</b>1 to 2 years<br>
+<b>Qualification:</b>High School Certificate <br>
+<b>Salary:</b>$27 per hour (about $49,140 to $56,160 per year)<br>
+<h3>Country: Canada</h3></p></div>
+
+
+<div class="card"><p><h3>Family Physician
+
+
+</h3>
+
+<b>Company:</b>Torrent (Redstone) Medical Clinic<br>
+<b>Skills:</b>Client focus, good communication, organized, reliable, attention to detail<br>
+<b>Job Location:</b>Calgary, Alberta<br>
+<b>Experience:</b>2 to 3 years<br>
+<b>Qualification:</b>Degree in Medicine (or Dentistry, Veterinary, Optometry) <br>
+<b>Salary:</b>$216,833 to $400,000 per year (about $104 to $192 per hour)<br>
+<h3>Country: Canada</h3></p></div>
+</div>
+
+
+
+
+  <!-- Unique Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>About Us</h3>
+        <p>We help people find safe and trusted jobs in other countries. Our website shares job openings from good companies around the world. Whether you have skills or are just starting, we guide you step by step. Your success abroad is important to us.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="Aus.html">Australia Jobs</a></p>
+        <p><a href="canada.html">Canada Jobs</a></p>
+        <p><a href="UK.html">UK Jobs</a></p>
+        <p><a href="romania.html">Romania Jobs</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+        
+      <div>
+        <h3>Contact</h3>
+        <p>Email: jobsone21@gmai.com</p>
+           <p><a href="term.html">Term and Condition</a></p>
+        <p><a href="privacy.html">Privacy</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+    © 2025 My Website | Designed with  legal authorized
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
