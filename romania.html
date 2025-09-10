@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Div Website</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+
+}
+   
+  
+/*
+ body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+*/
+
+/* Navbar Base */
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Navbar Base */
+.navbar {
+background-color: #333;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.navbar li {
+position: relative;
+}
+
+.navbar a {
+display: block;
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navbar a:hover {
+background-color: #575757;
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+display: none;
+}
+
+.menu-icon {
+display: none;
+font-size: 22px;
+color: white;
+padding: 14px 20px;
+cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.navbar ul {
+flex-direction: column;
+display: none;
+width: 100%;
+background: #333;
+}
+
+.navbar ul li {
+text-align: left;
+border-top: 1px solid #444;
+}
+
+.menu-icon {
+display: block;
+}
+
+.menu-toggle:checked + .menu-icon + ul {
+display: flex;
+}
+}
+
+.content {
+margin-top: 70px;
+padding: 20px;
+}
+    
+    
+
+ 
+        
+    
+
+    /* Navbar */
+/*
+    .navbar{
+      background:#219ebc;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.15);
+
+     
+      }
+*/
+      
+/*
+       header{background:transparent;padding:1rem 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--gap)}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text);font-weight:600}
+    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:inline-grid;place-items:center;color:#fff;font-weight:700}
+
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{color:var(--text);text-decoration:none;padding:.5rem .6rem;border-radius:8px}
+    nav a:hover, nav a:focus{background:rgba(14,165,164,0.08)}
+
+      
+*/
+      
+      
+      
+      
+      
+      
+/*
+    .navbar h1{
+      font-size:1.5rem;
+      font-weight:bold;
+      color:#0f172a;
+    }
+    .navbar ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+    }
+    .navbar ul li a{
+      text-decoration:none;
+      font-size:1rem;
+      font-weight:bold;
+      color:#0f172a;
+      padding:6px 12px;
+      border-radius:6px;
+      transition:all .3s ease;   
+    }
+      
+  
+
+      
+    .navbar ul li a:hover{
+      background:white;
+      color:black;
+    }
+    .navbar ul li a:active{
+      background:#3b82f6;
+      color:#fff;
+    }
+*/
+
+    /* Hero Heading Section */
+    .hero{
+      background:#f1f5f9;
+      text-align:center;
+      padding:1px 20px;
+      border-bottom:3px solid white;
+      border-top:250px solid white ;
+
+    }
+    .hero h2{
+      font-size:2.2rem;
+      font-weight:bold;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      color:#475569;
+    }
+
+    /* Main container */
+    .container{
+      width:100%;
+      max-width:650px;
+      margin:40px auto;
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius:16px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
+      padding:20px;
+      height:400px; 
+      display:inline;
+      flex-direction:column;
+      justify-content:flex-start;
+      color:#fff;
+      transition:transform .3s;
+/*        font-size: 15px;*/
+    }
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card:nth-child(1){background:#669bbc;}
+    .card:nth-child(2){background:#669bbc;}
+    .card:nth-child(3){background:#669bbc;}
+    .card:nth-child(4){background:#669bbc;}
+    .card:nth-child(5){background:#669bbc;}
+    .card:nth-child(6){background:#669bbc;}
+    .card:nth-child(7){background:#669bbc;}
+
+    .card:nth-child(8){background:#669bbc;}
+    .card:nth-child(9){background:#669bbc;}
+    .card:nth-child(10){background:#669bbc;}
+    .card:nth-child(11){background:#669bbc;}
+    .card:nth-child(12){background:#669bbc;}
+    .card:nth-child(13){background:#669bbc;}
+    .card:nth-child(14){background:#669bbc;}
+    .card:nth-child(15){background:#669bbc;}
+    .card:nth-child(16){background:#669bbc;}
+    .card:nth-child(17){background:#669bbc;}
+    .card:nth-child(18){background:#669bbc;}
+    .card:nth-child(19){background:#669bbc;}
+    .card:nth-child(20){background:#669bbc;}
+          .card:nth-child(21){background:#669bbc;}
+    .card:nth-child(22){background:#669bbc;}
+
+
+
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.6rem;
+      font-weight:bold;
+    }
+    .card p{
+      font-size:1rem;
+      line-height:1.6;
+    }
+
+    /* Big Gradient Section */
+    .big-gradient{
+      margin-top:60px;
+      height:300px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff;
+      border-radius:20px 20px 0 0;
+      background:linear-gradient(90deg,#ef4444,#3b82f6,#22c55e,#eab308,#a855f7,#f97316,#14b8a6);
+    }
+
+    /* Unique Footer */
+    footer{
+      background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+      color:#fff;
+      padding:50px 20px 20px;
+    }
+    .footer-container{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+    .footer-container h3{
+      margin-bottom:15px;
+      font-size:1.3rem;
+      border-bottom:2px solid #38bdf8;
+      display:inline-block;
+      padding-bottom:5px;
+    }
+    .footer-container p, 
+    .footer-container a{
+      color:#e2e8f0;
+      font-size:.95rem;
+      line-height:1.6;
+      text-decoration:none;
+      transition:color .3s;
+    }
+    .footer-container a:hover{
+      color:#38bdf8;
+    }
+    .social-icons{
+      display:flex;
+      gap:15px;
+      margin-top:15px;
+    }
+    .social-icons a{
+      background:#334155;
+      color:#fff;
+      padding:10px;
+      border-radius:50%;
+      display:inline-block;
+      transition:background .3s;
+    }
+    .social-icons a:hover{
+      background:#38bdf8;
+    }
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,0.2);
+      font-size:.9rem;
+      color:#94a3b8;
+    }
+      
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<!--  <nav class="navbar">-->
+<!--    <h1>My Website</h1>-->
+<!--
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Aus.html">Australia</a></li>
+<li><a href="canada.html">Canada</a></li>
+<li><a href="UK.html">UK</a></li>
+<li><a href="menu.html">Romania</a></li>
+<li><a href="contact.html">Contact</a></li>
+    </ul>
+-->
+<!--  </nav>-->
+
+    
+    
+
+
+<nav class="navbar">
+<!-- Checkbox for toggle -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰ Menu</label>
+
+<!-- Menu Items -->
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Aus.html">Australia</a></li>
+<li><a href="canada.html">Canada</a></li>
+<li><a href="UK.html">UK</a></li>
+<li><a href="romania.html">Romania</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <!-- Hero Heading Section -->
+<section class="hero">
+<h2>ROMANIA JOBS</h2>
+
+</section>
+
+<!-- Content -->
+<div class="container">
+<div class="card">
+<p><h3>Commercial Worker </h3>
+<br>
+<b>Company:</b>SC SETRA COM SRL / Aurora Multimarket<br>
+<b>Skills:</b> Excellent communication, teamwork, organizational skills, attention to detail, results-oriented, motivated, cheerful personality<br>
+<b>Job Location:</b> Mangalia, Romania<br>
+<b>Experience:</b> Previous experience in sales or similar role preferred<br>
+<b>Qualification:</b> Basic education, sales-related qualification preferred<br>
+<b>Last Date:</b> 26 September 2025<br>
+<b>Salary:</b>Fixed salary with meal vouchers worth 30 lei/day, private medical subscription to Regina Maria
+<br><h3>Country: Romania</h3></p></div>
+
+
+
+
+
+
+<div class="card"><p><h3>Laboratory Assistant</h3>
+<br>
+<b>Company:</b>SC GRAL MEDICAL SRL<br>
+<b>Skills:</b> Sample processing, use of hematology/biochemistry/coagulation equipment<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> Previous medical assistant experience preferred<br>
+<b>Qualification:</b> Post-secondary school or specialized faculty in medical field, ALP/Valid and registered OAMMR membership certificate, valid malpractice insurance<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Equipment Electrician</h3>
+<br>
+<b>Company:</b>ManpowerGroup Romania<br>
+<b>Skills:</b> Industrial equipment maintenance, electrical diagnostics, automation systems, interpreting electrical diagrams, knowledge of industrial sensors, pneumatic/hydraulic drives, teamwork, problem-solving<br>
+<b>Job Location:</b> Brasov, Romania<br>
+<b>Experience: </b>Experience in industrial equipment maintenance and repair<br>
+<b>Qualification:</b> Secondary technical studies with electrician qualification<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Welder </h3>
+<br>
+<b>Company:</b>Bunge Romania<br>
+<b>Skills:</b> Welding techniques, compliance with safety procedures, attention to detail, ability to work independently and responsibly<br>
+<b>Job Location:</b> Buzau, Romania<br>
+<b>Experience:</b> Experience in a similar position preferred<br>
+<b>Qualification:</b> Secondary education with Welder qualification<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Junior Cost Controlling Engineer (m/f)</h3>
+<br>
+<b>Company:</b>SC SETRA COM SRL / STRABAG SRL<br>
+<b>Skills:</b> MS Office (Excel), knowledge of iTWO/MS Project/TILOS (advantage), analytical ability, teamwork, communication<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> 0-3 years in construction field<br>
+<b>Qualification:</b> Graduate of a technical faculty of construction (civil, hydrotechnical constructions are an advantage)<br>
+<b>Last Date:</b> 17 September 2025 Depends on your qualifications<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Food Distribution Driver</h3><br>
+<b>Company:</b>SC SETRA COM SRL<br>
+<b>Skills: </b>Positive attitude, teamwork, good communication, reliable, dynamic, organized, no criminal or driving record<br>
+<b>Job Location:</b> Bucharest & Ilfov (Jilava, 1 Decembrie, Berceni, Popesti Leordeni), Romania<br>
+<b>Experience:</b> Minimum 2 years in similar position<br>
+<b>Qualification:</b> Category B Driving Licence, permanent residence in Bucharest or Ilfov<br>
+<b>Last Date:</b> 19 September 2025<br>
+<b>Salary:</b>Fixed salary, commission for trips/deliveries, meal vouchers, vacation (summer/winter), mobile phone<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Transport Dispatcher – Baia Mare</h3>
+<br>
+<b>Company:</b>SC SETRA COM SRL<br>
+<b>Skills:</b> Excellent communication, strong organizational skills, knowledge of logistics operations, teamwork, ability to work shifts<br>
+<b>Job Location:</b> Baia Mare, Romania<br>
+<b>Experience:</b> Minimum 1 year as dispatcher or in a similar role, minimum 1 year in transport field, logistics warehouse experience is an advantage<br>
+<b>Salary:</b>Fixed salary with possibility of increase after probation, fuel deduction 300 RON net, meal vouchers 30 RON/day, Easter & Christmas bonus<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Dental Assistant</h3>
+<br>
+<b>Company:</b>Dental Medical Office - Dr. Birta Bogdan-Călin<br>
+<b>Skills:</b> Communication, teamwork, attention to detail, empathy, responsibility, passion for medical field<br>
+<b>Job Location:</b> Baia Mare, Romania<br>
+<b>Experience:</b> Previous experience in dentistry preferred<br>
+<b>Qualification:</b> Nursing certificate; previous dentistry experience is an advantage but not mandatory<br>
+<b>Last Date:</b> ASAP<br>
+<b>Salary:</b>Competitive salary with attractive benefits package and potential for advancement<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><p><h3>Interior Painter</h3>
+<br>
+<b>Company:</b>Business Activ Consult SRL<br>
+<b>Skills:</b> Surface preparation, paint mixing, painting techniques, attention to detail, use of tools and safety equipment<br>
+<b>Job Location:</b> Utrecht, Netherlands<br>
+<b>Experience:</b> Minimum 3 years in painting field<br>
+<b>Qualification:</b> Basic knowledge of English, valid driver’s license, VCA and BSN preferred<br>
+<b>Last Date:</b> ASAP<br>
+<b>Salary:</b>550–600 Euros net per week<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><h3>Junior Cost Controlling Engineer (m/f) </h3><p>
+<br>
+<b>Company:</b>STRABAG SRL<br>
+<b>Skills:</b> MS Office (Excel), knowledge of iTWO, MS Project, TILOS (advantage)<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> 0–3 years in construction field<br>
+<b>Qualification:</b> Graduate of a technical faculty of construction (civil or hydrotechnical preferred)<br>
+<b>Last Date:</b> 17/09/2025 Depends on your qualifications<br>
+<h3>Country: Romania</h3></p></div>
+
+
+
+<div class="card"><h3>Billing Computer Operator</h3><p>
+<br>
+<b>Company:</b>SC SETRA COM SRL<br>
+<b>Skills:</b> Document management, organization, computer literacy, accuracy, reliability<br>
+<b>Job Location:</b> Dragomiresti-Vale, Ilfov County, Romania<br>
+<b>Qualification:</b> Minimum secondary education; Very good knowledge of Windows and Microsoft Office<br>
+<h3>Country: Romania</h3</p></div>
+
+
+
+<div class="card"><p><h3>Electrician</h3>
+<br>
+<b>Company:</b>SC SETRA COM SRL (Prohuman APT)<br>
+<b>Skills:</b> Attention to detail, reliability, adherence to safety rules, ability to work in a team, willingness to travel<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> Minimum 2 years relevant experience in the field<br>
+<b>Qualification:</b> Electrician certificate mandatory; Driving license category B<br>
+<b>Last Date:</b> ASAP
+<b>Salary:</b>Competitive, depending on experience; Daily travel allowance 45 lei/day; Accommodation provided during travel<br>
+<h3>Country: Romania</h3</p></div>
+    
+    
+<div class="card"><p><h3>Courier / Subcontractor</h3>
+<br>
+
+<b>Company:</b>SC SETRA COM SRL (Bookurier)<br>
+<b>Skills:</b> Courier: Organizational skills, punctuality, customer service, professionalism; Subcontractor:</b> Team management, route planning, client communication, reliability<br>
+<b>Experience:</b> Courier: Minimum experience in deliveries preferred; Subcontractor: Experience in managing deliveries and teams preferred<br>
+<b>Qualification:</b> Courier: Driving license<br>
+<b>Salary:Courier:</b> 3500 lei per month; Subcontractor:</b> Over 10,000 lei per month<br>
+<h3>Country: Romania</h3</p></div>
+    
+    
+    
+<div class="card"><p><h3>Driver</h3>
+<br>
+<b>Company:</b>SABCO-S SRL<br>
+<b>Skills:</b> Safe driving, reliability, time management, knowledge of regional routes<br>
+<b>Job Location:</b> Dorohoi, Romania<br>
+<b>Experience:</b> Previous driving experience preferred<br>
+<b>Qualification: </b>Driver Category C Licence<br>
+<b>Last Date:</b> ASAP<br>
+<b>Salary:</b>3200 - 5000 RON per month<br>
+<h3>Country: Romania</h3</p></div>
+    
+    
+<div class="card"><p><h3>Courier And Warehouse Goods Sorter</h3>
+<br>
+<b>Company:</b>FAN Courier Bacau<br>
+<b>Skills:</b> Time management, physical stamina, customer service, driving, teamwork<br>
+<b>Job Location:</b> Bacau, Romania<br>
+<b>Experience: </b>Driver experience in a distribution company is an advantage<br>
+<b>Qualification: </b>Valid driving license preferred; familiarity with courier or logistics operations is an advantage<br>
+<b>Last Date:</b> 3 September 2025<br>
+<b>Salary:</b>Attractive salary plus monthly performance bonuses<br>
+<h3>Country: Romania</h3</p></div>
+    
+    
+    
+<div class="card"><p><h3>Software Developer (laravel & Angular) – Part-time/remote</h3>
+<br>
+<b>Company:</b>Netrom Communications<br>
+<b>Skills:</b> Laravel, Angular, HTML, CSS, JavaScript, PostgreSQL, proactive mindset, organizational skills, problem-solving, ability to work independently and in a team<br>
+<b>Experience: </b>Minimum 2–3 years in web and mobile programming<br>
+<b>Qualification: </b>Proficiency in Laravel and Angular; knowledge of HTML, CSS, PHP, JavaScript<br>
+<b>Salary:</b>4000 to 5000<br>
+    <h3>Country: Romania</h3></p></div>
+    
+    
+    
+    
+    <div class="card"><p><h3>Computer Operator</h3>
+
+<b>Company:</b>Consilium Professional Notary Society<br>
+<b>Skills:</b> Document drafting, attention to detail, legal terminology knowledge, computer literacy<br>
+<b>Job Location: </b>Romania<br>
+<b>Experience:</b> Previous work in notarial document preparation preferred<br>
+<b>Qualification:</b> Experience in drafting notarial legal documents<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+ <h3>Country: Romania</h3></p></div>
+    
+    
+<div class="card"><p><h3>General Medical Assistant</h3>
+<br>
+<b>Company:</b>SC GRAL MEDICAL SRL<br>
+<b>Skills:</b> High sense of responsibility, MS Office knowledge, stress management, dynamic and results-oriented, teamwork, patient care skills<br>
+<b>Job Location:</b> Romania<br>
+<b>Experience:</b> Previous experience preferred; specialized courses are an advantage<br>
+<b>Qualification:</b> Post-secondary school or specialized college in the medical field, valid ALP/Membership Certificate endorsed by OAMMR, valid malpractice insurance<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+ <h3>Country: Romania</h3></p></div>
+    
+    
+    
+<div class="card"><p><h3>Electrician</h3>
+<br>
+    <b>Company:</b>ManpowerGroup Romania<br>
+    <b>Skills:</b> Automotive electrical expertise, organizational skills, attention to detail, team spirit, proactive attitude<br>
+<b>Job Location:</b> Calea Giulești, Bucharest, Romania<br>
+<b>Experience:</b> Minimum 2 years in a similar position<br>
+<b>Qualification:</b> Advanced knowledge of automotive electrical systems, Category B driving license<br>
+<b>Last Date:</b> ASAP<br>
+<b>Salary:</b>Attractive salary based on individual performance<br>
+ <h3>Country: Romania</h3></p></div>
+    
+    
+<div class="card"><p><h3>Civil Construction Painter</h3>
+<br>
+<b>Company:ERPA HR<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> Experience in low voltage electrical installations, painting, and finishing works preferred<br>
+<b>Qualification:</b> Studies or qualification in the electrical field (vocational school, authorized electrician course, etc.)<br>
+<b>Last Date:</b> ASAP<br>
+<b>Salary:</b>Net salary between 4000 and 5000 lei, plus 800 lei/month meal vouchers<br>
+ <h3>Country: Romania</h3></p></div>
+    
+</div>
+<!--   Unique Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>About Us</h3>
+        <p>We help people find safe and trusted jobs in other countries. Our website shares job openings from good companies around the world. Whether you have skills or are just starting, we guide you step by step. Your success abroad is important to us.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="Aus.html">Australia Jobs</a></p>
+        <p><a href="canada.html">Canada Jobs</a></p>
+        <p><a href="UK.html">UK Jobs</a></p>
+        <p><a href="romania.html">Romania Jobs</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+        
+      <div>
+        <h3>Contact</h3>
+        <p>Email: jobsone21@gmai.com</p>
+           <p><a href="term.html">Term and Condition</a></p>
+        <p><a href="privacy.html">Privacy</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 My Website | All rights reserved
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
