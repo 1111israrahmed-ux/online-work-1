@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Div Website</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+    }
+
+    /* Navbar */
+/*
+    .navbar{
+      background:#fff;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    }
+    .navbar h1{
+      font-size:1.5rem;
+      font-weight:bold;
+      color:#0f172a;
+    }
+    .navbar ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+    }
+    .navbar ul li a{
+      text-decoration:none;
+      font-size:1rem;
+      font-weight:bold;
+      color:#0f172a;
+      padding:6px 12px;
+      border-radius:6px;
+      transition:all .3s ease;
+    }
+    .navbar ul li a:hover{
+      background:#0f172a;
+      color:#fff;
+    }
+    .navbar ul li a:active{
+      background:#3b82f6;
+      color:#fff;
+    }
+*/
+      
+      
+      
+      
+      body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Navbar Base */
+.navbar {
+background-color: #333;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.navbar li {
+position: relative;
+}
+
+.navbar a {
+display: block;
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navbar a:hover {
+background-color: #575757;
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+display: none;
+}
+
+.menu-icon {
+display: none;
+font-size: 22px;
+color: white;
+padding: 14px 20px;
+cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.navbar ul {
+flex-direction: column;
+display: none;
+width: 100%;
+background: #333;
+}
+
+.navbar ul li {
+text-align: left;
+border-top: 1px solid #444;
+}
+
+.menu-icon {
+display: block;
+}
+
+.menu-toggle:checked + .menu-icon + ul {
+display: flex;
+}
+}
+
+.content {
+margin-top: 70px;
+padding: 20px;
+}
+
+    /* Hero Heading Section */
+    .hero{
+      background:#f1f5f9;
+      text-align:center;
+      padding:24px 20px;
+      border-bottom:3px solid white;
+          border-top:250px solid white ;
+
+    }
+    .hero h2{
+      font-size:2.2rem;
+      font-weight:bold;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      color:#475569;
+    }
+
+    /* Main container */
+    .container{
+      width:100%;
+      max-width:650px;
+      margin:40px auto;
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius:16px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
+      padding:20px;
+      height:360px; 
+      display:inline;
+      flex-direction:column;
+      justify-content:flex-start;
+      color:black;
+      transition:transform .3s;
+    }
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card:nth-child(1){background:#eed7c5;}
+    .card:nth-child(2){background:#eed7c5;}
+    .card:nth-child(3){background:#eed7c5;}
+    .card:nth-child(4){background:#eed7c5;}
+    .card:nth-child(5){background:#eed7c5;}
+    .card:nth-child(6){background:#eed7c5;}
+    .card:nth-child(7){background:#eed7c5;}
+    .card:nth-child(8){background:#eed7c5;}
+    .card:nth-child(9){background:#eed7c5;}
+    .card:nth-child(10){background:#eed7c5;}
+    .card:nth-child(11){background:#eed7c5;}
+    .card:nth-child(12){background:#eed7c5;}
+    .card:nth-child(13){background:#eed7c5;}
+    .card:nth-child(14){background:#eed7c5;}
+    .card:nth-child(15){background:#eed7c5;}
+    .card:nth-child(16){background:#eed7c5;}
+
+
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.6rem;
+      font-weight:bold;
+    }
+    .card p{
+      font-size:1rem;
+      line-height:1.6;
+    }
+
+    /* Big Gradient Section */
+    .big-gradient{
+      margin-top:60px;
+      height:300px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff;
+      border-radius:20px 20px 0 0;
+      background:linear-gradient(90deg,#ef4444,#3b82f6,#22c55e,#eab308,#a855f7,#f97316,#14b8a6);
+    }
+
+    /* Unique Footer */
+   footer{
+background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+color:#fff;
+padding:50px 20px 20px;
+       
+}
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+.footer-container h3{
+margin-bottom:15px;
+font-size:1.3rem;
+border-bottom:2px solid #38bdf8;
+display:inline-block;
+padding-bottom:5px;
+}
+.footer-container p,
+.footer-container a{
+color:#e2e8f0;
+font-size:.95rem;
+line-height:1.6;
+text-decoration:none;
+transition:color .3s;
+}
+.footer-container a:hover{
+color:#38bdf8;
+}
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+.social-icons a{
+background:#334155;
+color:#fff;
+padding:10px;
+border-radius:50%;
+display:inline-block;
+transition:background .3s;
+}
+.social-icons a:hover{
+background:#38bdf8;
+}
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+font-size:.9rem;
+color:#94a3b8;
+}
+.card{
+background-color:#14b8a6
+
+}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+ <nav class="navbar">
+<!-- Checkbox for toggle -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰ Menu</label>
+
+<!-- Menu Items -->
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Aus.html">Australia</a></li>
+<li><a href="canada.html">Canada</a></li>
+<li><a href="UK.html">UK</a></li>
+<li><a href="romania.html">Romania</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+  <!-- Hero Heading Section -->
+  <section class="hero">
+    <h2>AUSTRALIA JOBS</h2>
+   
+  </section>
+
+  <!-- Content -->
+  <div class="container">
+   <div class="card"><p><h3>Electrician
+
+
+</h3>
+
+<b>Company:</b>pladis Romania<br>
+<b>Skills:</b> Knowledge of electrical diagrams and symbols, knowledge of electrical drives and automation, ability to work shifts, physical effort tolerance, teamwork<br>
+<b>Job Location:</b>Romania<br>
+<b>Experience:</b>Minimum 3 years in a similar role within a production company<br>
+<b>Qualification:</b>Certified electrician qualification <br>
+<b>Salary:</b>68,864 – 74,000 AUD per year (about 33 – 36 AUD per hour)<br>
+<h3>Country:Australia </h3></p></div>
+    
+    
+ <div class="card"><p><h3>Delivery Driver
+
+
+</h3>
+
+<b>Company:</b>Air Voice Supermarkets Pty Ltd (IGA store)<br>
+<b>Skills:</b>Safe driving, navigation, customer service, loading/unloading, punctual, flexible<br>
+<b>Job Location:</b>Esperance, WA 6450, Australia<br>
+<b>Experience:</b>6 months as delivery driver<br>
+<b>Qualification:</b>Current driver’s license <br>
+<b>Salary:</b>67,864 – 74,000 AUD per year (about 33 – 36 AUD per hour)<br>
+<h3>Country:Australia </h3></p></div>   
+    
+    
+<div class="card"><p><h3>Kitchenhands
+
+
+</h3>
+
+<b>Company:</b>HQ Migration Solutions<br>
+<b>Skills:</b>Teamwork, food handling, time management, organisation, adaptability, positive attitude<br>
+<b>Job Location:</b>Galiwinku, Northern Territory, Australia<br>
+<b>Experience:</b>Kitchenhand experience preferred<br>
+<b>Qualification:</b>Food handling skills <br>
+<b>Salary:</b>50,000 - 77,000 AUD per year (about 24 - 37 AUD per hour)<br>
+<h3>Country:Australia </h3></p></div>
+    
+    
+ <div class="card"><p><h3>Nurse
+
+
+</h3>
+
+<b>Company:</b>KRIPA HEALTH PTY LTD<br>
+<b>Skills:</b> Nursing care, patient management, wound dressing, immunization, triage, infection control, teamwork, documentation, communication skills, clinical governance<br>
+<b>Job Location:</b>Bendigo, VIC, Australia<br>
+<b>Experience:</b>Previous nursing experience in clinical practice, wound management, immunizations, and patient care<br>
+<b>Qualification:</b>Relevant nursing degree, valid registration as a nurse in Australia <br>
+<b>Salary:</b>AUD 70,000 per year including benefits<br>
+<h3>Country:Australia </h3></p></div>   
+    
+    
+  <div class="card"><p><h3>Pharmacist
+
+
+</h3>
+
+<b>Company:</b>Howles Pharmacy<br>
+<b>Skills:</b>Communication, teamwork, clinical knowledge, customer service<br>
+<b>Job Location:</b>Tamworth, NSW<br>
+<b>Experience:</b>Similar role preferred<br>
+<b>Qualification:</b>AHPRA Registered Pharmacist <br>
+<b>Salary:</b>Around AUD 90,000 per year (about AUD 43 per hour)<br>
+<h3>Country:Australia </h3></p></div>  
+    
+ <div class="card"><p><h3>Pick Packer
+
+
+</h3>
+
+<b>Company:</b>CoreStaff (CS/GOAL)<br>
+<b>Skills:</b>Pick packing, Warehouse work, Accuracy, Safety awareness, Teamwork, Communication, Organisation<br>
+<b>Job Location:</b>Banyo / Virginia, QLD<br>
+<b>Experience:</b>Pick packing or warehouse experience preferred<br>
+<b>Qualification:</b>Not mentioned <br>
+<b>Salary:</b>33 AUD per hour (about 68,640 AUD per year, based on 40 hrs/week)<br>
+<h3>Country:Australia </h3></p></div>   
+    
+    
+ <div class="card"><p><h3>Production And Forklift Operator
+
+
+</h3>
+
+<b>Company:</b>Transcend Managed Services<br>
+<b>Skills:</b> Forklift operation, Machine operation, Safety awareness, Physical strength, Communication, Teamwork, Attention to detail<br>
+<b>Job Location:</b>Melbourne (Bayswater)<br>
+<b>Experience:</b>Production or warehouse experience preferred<br>
+<b>Qualification:</b>Forklift Licence <br>
+<b>Salary:</b>33.93 AUD per hour (about 70,574 AUD per year, based on 40 hrs/week)<br>
+<h3>Country:Australia </h3></p></div>
+
+
+
+<div class="card"><p><h3>Financial Accountant
+
+
+</h3>
+
+<b>Company:</b>FourQuarters<br>
+<b>Skills:</b> Tax compliance, Financial reporting, BAS, FBT, Attention to detail, Analytical skills, Communication, Stakeholder management<br>
+<b>Job Location:</b>Perth<br>
+<b>Experience:</b> Tax and financial accounting experience, large corporate/property sector experience preferred<br>
+<b>Qualification:</b>CA or CPA qualified <br>
+<b>Salary:</b>100,000 – 120,000 AUD per year (about 48 – 58 AUD per hour) + super<br>
+<h3>Country:Australia </h3></p></div>
+    
+    
+ <div class="card"><p><h3>Tractor Operator
+
+
+</h3>
+
+<b>Company:</b>Category 5 Labour Management<br>
+<b>Skills:</b>Tractor operation, Drivers Licence (HR preferred), Safety awareness, Teamwork, Reliability, Punctuality<br>
+<b>Job Location:</b>Collie, Western Australia<br>
+<b>Experience:</b>Tractor operation experience (400–600hp with attachments), VOC pass required<br>
+<b>Qualification:</b> Valid Construction Card <br>
+<b>Salary:</b>Not mentioned (Casual role, weekly pay with allowances)<br>
+<h3>Country:Australia </h3></p></div>   
+    
+    
+  <div class="card"><p><h3>enior Accountant (casual, Mandarin Speaking)
+
+
+</h3>
+
+<b>Company:</b>Brilliantalent<br>
+<b>Skills:</b> Accounting, Tax knowledge, Financial reporting, Cashflow management, Reconciliation, Communication (Chinese & English)<br>
+<b>Job Location:</b>Sydney<br>
+<b>Experience:</b>Big 4 experience preferred<br>
+<b>Qualification:</b>Degree in Commerce, Business or Accounting. CA or CPA qualified. <br>
+<b>Salary:</b>70 – 90 AUD per hour (about 145,600 – 187,200 AUD per year, based on 40 hrs/week)<br>
+<h3>Country:Australia </h3></p></div>  
+    
+    
+    
+  <div class="card"><p><h3>Machinery Supervisor
+
+
+</h3>
+
+<b>Company:</b>Zerella Fresh<br>
+<b>Skills:</b> Machinery supervision, maintenance, quality checks, team management, production monitoring, safety, work scheduling<br>
+<b>Job Location:</b> Parilla, South Australia, Australia<br>
+<b>Experience:</b>Not mentioned<br>
+<b>Qualification:</b>Not mentioned <br>
+<b>Salary:</b>$26.63 per hour (≈ $52,380 per year for 38 hrs/week)<br>
+<h3>Country:Australia </h3></p></div>  
+    
+    
+<div class="card"><p><h3>Head Waiter
+
+
+</h3>
+
+<b>Company:</b>Vineria Luisa Pty Ltd<br>
+<b>Skills:</b> Customer service, POS system use, food & wine knowledge, communication, attention to detail, teamwork, flexibility<br>
+<b>Job Location:</b>Enmore, New South Wales, Australia<br>
+<b>Experience:</b>1–3 years in premium dining as waiter<br>
+<b>Qualification:</b>Hospitality studies (preferred) <br>
+<b>Salary:</b>$75,000 – $80,000 per year (≈ $36 – $38 per hour) + super + tips + bonuses<br>
+<h3>Country:Australia </h3></p></div>
+
+
+<div class="card"><p><h3>Specialist Behaviour Support Practitioner
+
+
+</h3>
+
+<b>Company:</b>Zeal RIT Pty Ltd t/a Next Gen Talent (Client: Pink Comfort Pty Ltd)<br>
+<b>Skills:</b> Behavioural assessment, counselling<br>
+<b>Job Location:</b>North Parramatta, NSW, Australia<br>
+<b>Experience:</b>3+ years as Behaviour Support Practitioner<br>
+<b>Qualification:</b>Degree in Psychotherapy, Counselling, Mental Health Nursing, or Behavioural Science <br>
+<b>Salary:</b>$142,000 per year (≈ $68 per hour, based on 40 hrs/week)<br>
+<h3>Country:Australia </h3></p></div>
+
+
+<div class="card"><p><h3>Planner / Programmer
+
+
+</h3>
+
+<b>Company:</b>Hays<br>
+<b>Skills:</b>Project planning, budget management, communication, organisation, problem solving, project management software<br>
+<b>Job Location:</b> Melbourne CBD, Victoria, Australia<br>
+<b>Experience:</b>Project planning and management in construction (fitout/interiors preferred)<br>
+<b>Qualification:</b>Bachelor’s degree in Construction Management, Engineering, or similar <br>
+<b>Salary:</b>$110,000 – $150,000 per year (≈ $52 – $72 per hour)<br>
+<h3>Country:Australia </h3></p></div>    
+        
+        
+ <div class="card"><p><h3>Part-time Office Assistant (school Hours)
+
+
+</h3>
+
+<b>Company:</b>The trustee for Salloum Super Fund (Comset – Supplier of 5G Routers)<br>
+<b>Skills:</b> Communication, customer service, computer skills, organisation, invoicing, packing/shipping<br>
+<b>Job Location:</b>Burwood, Victoria, Australia<br>
+<b>Experience:</b>Admin, customer service, or packing work (preferred but not required)<br>
+<b>Qualification:</b> Not mentioned<br>
+<b>Salary:</b>About $30 per hour (≈ $18,720 per year for 12 hrs/week) <br>
+<h3>Country:Australia </h3></p></div>   
+    
+    
+ <div class="card"><p><h3>Storeperson / Forklift Driver
+
+
+</h3>
+
+<b>Company:</b>Amanda Pratt / Randstad<br>
+<b>Skills:</b>Forklift operation (LF licence), stock handling, picking, computer use, physically fit<br>
+<b>Job Location:</b> Darra, QLD<br>
+<b>Experience:</b> Previous storeperson or pick packer experience Depends on your qualifications<br>
+<b>Qualification:</b>Forklift operation <br>
+<b>Salary:</b>$110,000 – $150,000 per year (≈ $52 – $72 per hour)<br>
+<h3>Country:Australia </h3></p></div>   
+    
+ </div>   
+    
+    
+  <!-- Unique Footer -->
+ <footer>
+<div class="footer-container">
+<div>
+<h3>About Us</h3>
+<p>We help people find safe and trusted jobs in other countries. Our website shares job openings from good companies around the world. Whether you have skills or are just starting, we guide you step by step. Your success abroad is important to us.</p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<p><a href="index.html">Home</a></p>
+<p><a href="Aus.html">Australia Jobs</a></p>
+<p><a href="canada.html">Canada Jobs</a></p>
+<p><a href="UK.html">UK Jobs</a></p>
+<p><a href="romania.html">Romania Jobs</a></p>
+<p><a href="contact.html">Contact</a></p>
+
+    
+</div>
+<div>
+<h3 id="contact">Contact</h3>
+<p>Email: jobsone21@gmai.com</p>
+ <p><a href="term.html">Term and Condition</a></p>
+        <p><a href="privacy.html">Privacy</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+      © 2024 My Website | All rights reserved
+</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
