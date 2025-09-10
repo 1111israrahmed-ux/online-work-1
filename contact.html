@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professional Responsive Registration Form</title>
+
+  <!-- intl-tel-input CSS (CDN) for phone flag UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
+
+  <style>
+    /* ---------- Basic reset & font ---------- */
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#e9f0ff,#f8fbff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    /* ---------- Card container ---------- */
+    .card{
+      width:100%;
+      max-width:820px;
+      background:#ffffff;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(18,38,77,0.08);
+      padding:26px;
+      overflow:hidden;
+    }
+
+    .card-header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:52px;height:52px;border-radius:10px;
+      background:linear-gradient(135deg,#3b82f6,#06b6d4);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+      box-shadow:0 6px 18px rgba(11,26,56,0.08);
+    }
+
+    h1{
+      margin:0;font-size:20px;color:#0b2447;
+    }
+    p.lead{margin:4px 0 0;color:#556; font-size:13px}
+
+    /* ---------- Grid layout for form ---------- */
+    form{margin-top:12px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+    }
+
+    label{
+      display:block;
+      font-size:13px;
+      color:#253045;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius:10px;
+      border:1px solid #d3d8e0;
+      background:#fff;
+      font-size:14px;
+      color:#11203a;
+      transition:box-shadow .15s, border-color .15s;
+    }
+    input:focus, select:focus, textarea:focus{
+      outline:none;
+      border-color:#3b82f6;
+      box-shadow:0 6px 18px rgba(59,130,246,0.08);
+    }
+
+    textarea{min-height:96px; resize:vertical; padding-top:10px}
+
+    /* single full-width row */
+    .full { grid-column: 1 / -1; }
+
+    /* inline small note or error */
+    .note{font-size:13px;color:#556;margin-top:-8px;margin-bottom:8px}
+    .error{color:#d93b3b;font-size:13px;margin-top:6px;display:none}
+
+    /* submit btn */
+    .actions{margin-top:8px; display:flex; gap:12px; align-items:center}
+    button.primary{
+      background:linear-gradient(90deg,#2563eb,#06b6d4);
+      color:#fff;padding:12px 16px;border-radius:10px;border:0;font-weight:700;font-size:15px;
+      cursor:pointer;box-shadow:0 8px 24px rgba(6,182,212,0.12);
+    }
+    button.primary:active{transform:translateY(1px)}
+
+    /* success box */
+    .success{
+      text-align:center;padding:28px;border-radius:10px;background:linear-gradient(180deg,#ecfff6,#e6fff0);
+      border:1px solid rgba(34,197,94,0.12);
+    }
+    .success h2{color:#065f46;margin:6px 0}
+    .success p{color:#134e4a}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:repeat(1,1fr)}
+      .card{padding:18px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <div class="card-header">
+      <div class="logo">Form</div>
+      <div>
+        <h1> Registration Form</h1>
+<!--        <p class="lead">Complete responsive form — USA phone flag only • accepts gmail/yahoo/aol/comcast.net</p>-->
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form id="form" novalidate>
+      <div class="grid">
+        <div>
+          <label for="first">First Name</label>
+          <input id="first" name="first" type="text" placeholder="John" required>
+          <div class="error" id="err-first">First name is required</div>
+        </div>
+
+        <div>
+          <label for="last">Last Name</label>
+          <input id="last" name="last" type="text" placeholder="Doe" required>
+          <div class="error" id="err-last">Last name is required</div>
+        </div>
+
+        <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">-- Select Gender --</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <div class="error" id="err-gender">Please select gender</div>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
+<!--          <div class="note">Allowed domains: gmail.com, yahoo.com, aol.com, comcast.net</div>-->
+          <div class="error" id="err-email">Please enter a valid allowed email</div>
+        </div>
+
+        <div class="full">
+          <label for="phone">Phone Number (USA only)</label>
+          <!-- phone input; intl-tel-input will add flag and separate dial code -->
+          <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required>
+          <div class="error" id="err-phone">Please enter a valid US phone number</div>
+        </div>
+
+        <div>
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" required>
+          <div class="error" id="err-dob">Please select date of birth</div>
+        </div>
+
+        <div>
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" placeholder="New York" required>
+          <div class="error" id="err-city">City is required</div>
+        </div>
+
+        <div>
+          <label for="state">State</label>
+          <input id="state" name="state" type="text" placeholder="NY" required>
+          <div class="error" id="err-state">State is required</div>
+        </div>
+
+        <div>
+          <label for="country">Country</label>
+          <input id="country" name="country" type="text" value="United States" required>
+          <div class="error" id="err-country">Country is required</div>
+        </div>
+
+        <div>
+          <label for="zip">Zip Code</label>
+          <input id="zip" name="zip" type="text" placeholder="10001" required>
+          <div class="error" id="err-zip">Zip code required (numbers)</div>
+        </div>
+
+        <div class="full">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" placeholder="Any message..."></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- intl-tel-input JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <!-- utils script (for validation & formatting) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+
+  <script>
+    // ---------- Phone input setup: ONLY USA allowed ----------
+    const phoneInput = document.querySelector("#phone");
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "us",           // default = USA
+      onlyCountries: ["us"],         // restrict to USA only
+      separateDialCode: true,        // shows +1 separate to input
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+    });
+
+    // ---------- Helper: show/hide error ----------
+    function showError(id, show){
+      const el = document.getElementById(id);
+      el.style.display = show ? "block" : "none";
+    }
+
+    // ---------- Email validation for allowed domains ----------
+    function isAllowedEmail(email){
+      if(!email || typeof email !== 'string') return false;
+      // Allowed domains: gmail.com, yahoo.com, aol.com, comcast.net
+      const pattern = /^[A-Za-z0-9._%+-]+@(?:gmail\.com|yahoo\.com|aol\.com|comcast\.net)$/i;
+      return pattern.test(email.trim());
+    }
+
+    // ---------- Zip: numeric only ----------
+    function isValidZip(z){
+      return /^[0-9]{3,10}$/.test(z.trim());
+    }
+
+    // ---------- Form submit handler ----------
+    document.getElementById("form").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      // hide all errors initially
+      ['err-first','err-last','err-gender','err-email','err-phone','err-dob','err-city','err-state','err-country','err-zip'].forEach(id => showError(id,false));
+      let valid = true;
+
+      const first = document.getElementById("first").value.trim();
+      const last  = document.getElementById("last").value.trim();
+      const gender = document.getElementById("gender").value;
+      const email = document.getElementById("email").value.trim();
+      const dob = document.getElementById("dob").value;
+      const city = document.getElementById("city").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const country = document.getElementById("country").value.trim();
+      const zip = document.getElementById("zip").value.trim();
+
+      if(!first){ showError('err-first', true); valid = false; }
+      if(!last){ showError('err-last', true); valid = false; }
+      if(!gender){ showError('err-gender', true); valid = false; }
+      if(!isAllowedEmail(email)){ showError('err-email', true); valid = false; }
+
+      // phone: use intl-tel-input validation for US number
+      if(!iti.isValidNumber()){
+        showError('err-phone', true);
+        valid = false;
+      }
+
+      if(!dob){ showError('err-dob', true); valid = false; }
+      if(!city){ showError('err-city', true); valid = false; }
+      if(!state){ showError('err-state', true); valid = false; }
+      if(!country){ showError('err-country', true); valid = false; }
+      if(!isValidZip(zip)){ showError('err-zip', true); valid = false; }
+
+      if(!valid) {
+        // scroll to first error for better UX
+        const firstErr = document.querySelector('.error[style*="block"]');
+        if(firstErr) firstErr.scrollIntoView({behavior:'smooth',block:'center'});
+        return;
+      }
+
+      // If valid → show success card replacing the form
+      const card = document.getElementById("card");
+      const fullNumber = iti.getNumber(); // E.164 formatted number
+      const summaryHTML = `
+        <div class="success">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" style="margin:0 auto;display:block">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47716 2 2 6.47715 2 12C2 17.5228 6.47716 22 12 22Z" fill="#10b981"/>
+            <path d="M17 9L10.5 15.5L7 12" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2>Form Submitted Successfully!</h2>
+          <p>Thanks, <strong>${escapeHtml(first)} ${escapeHtml(last)}</strong>. We received your details.</p>
+          <p style="margin-top:12px;color:#064e3b">Email: ${escapeHtml(email)}<br>Phone: ${escapeHtml(fullNumber)}</p>
+        </div>
+      `;
+      card.innerHTML = summaryHTML;
+      // Optionally: here you can send data to server using fetch/ajax
+    });
+
+    // small helper to escape HTML when injecting user text into page
+    function escapeHtml(str){
+      if(!str) return '';
+      return str.replace(/[&<>"'`=\/]/g, function(s){
+        return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','/':'&#x2F;','`':'&#x60;','=':'&#x3D;'}[s];
+      });
+    }
+  </script>
+</body>
+</html>
