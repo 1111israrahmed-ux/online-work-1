@@ -177,9 +177,9 @@ padding: 20px;
       color:black;
       transition:transform .3s;
     }
-    .card:hover{
+/*     .card:hover{
       transform:translateY(-8px);
-    }
+    } */
 
     .card:nth-child(1){background:#eed7c5;}
     .card:nth-child(2){background:#eed7c5;}
@@ -284,6 +284,51 @@ background-color:#14b8a6
 
 }
     }
+
+
+
+   .ad-container {
+      max-width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .ad-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .apply-now-btn {
+      display: inline-block;
+      background-color: #ff5722;
+      color: white;
+      padding: 14px 28px;
+      margin: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-now-btn:hover {
+      background-color: #e64a19;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 500px) {
+      .apply-now-btn {
+        width: 90%;
+        padding: 16px;
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -323,7 +368,14 @@ background-color:#14b8a6
 <b>Experience:</b>Minimum 3 years in a similar role within a production company<br>
 <b>Qualification:</b>Certified electrician qualification <br>
 <b>Salary:</b>68,864 – 74,000 AUD per year (about 33 – 36 AUD per hour)<br>
-<h3>Country:Australia </h3></p></div>
+<h3>Country:Australia </h3>
+   
+   
+     <div class="ad-container">
+    <img src="https://via.placeholder.com/400x200.png?text=Your+Ad+Image" alt="Ad Image">
+    <a href="your-apply-link-here" class="apply-now-btn">Apply Now</a>
+  </div>
+</p></div>
     
     
  <div class="card"><p><h3>Delivery Driver
@@ -570,6 +622,7 @@ background-color:#14b8a6
 </footer>
 </body>
 </html>
+
 
 
 
