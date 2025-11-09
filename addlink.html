@@ -1,22 +1,565 @@
 <!doctype html>
 <html lang="en">
 <head>
-  </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jobsone.online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+
+}
+/* Navbar Base */ 
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Navbar Base */
+.navbar {
+background-color: #333;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+
+.navbar ul {
+list-style: none;
+margin: 0; 
+padding: 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.navbar li {
+position: relative;
+}
+
+.navbar a {
+display: block;
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navbar a:hover {
+background-color: #575757;
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+display: none;
+}
+
+.menu-icon {
+display: none;
+font-size: 22px;
+color: white;
+padding: 14px 20px;
+cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.navbar ul {
+flex-direction: column;
+display: none;
+width: 100%;
+background: #333;
+}
+
+.navbar ul li {
+text-align: left;
+border-top: 1px solid #444;
+}
+
+.menu-icon {
+display: block;
+}
+
+.menu-toggle:checked + .menu-icon + ul {
+display: flex;
+}
+}
+
+.content {
+margin-top: 70px;
+padding: 20px;
+}
+    
+
+    /* Hero Heading Section */
+    .hero{
+      background:#f1f5f9;
+      text-align:center;
+      padding:1px 20px;
+      border-bottom:3px solid white;
+      border-top:3px solid white ;
+
+    }
+    .hero h2{
+      font-size:2.2rem;
+      font-weight:bold;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      color:#475569;
+    }
+
+    /* Main container */
+    .container{
+      width:100%;
+      max-width:650px;
+      margin:40px auto;
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius:16px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
+      padding:20px;
+      height:460px; 
+      display:inline;
+      flex-direction:column;
+      justify-content:flex-start;
+      color:#fff;
+      transition:transform .3s;
+	
+    }
+
+    .card:nth-child(1){background:#669bbc;}
+    .card:nth-child(2){background:#669bbc;}
+    .card:nth-child(3){background:#669bbc;}
+    .card:nth-child(4){background:#669bbc;}
+    .card:nth-child(5){background:#669bbc;}
+    
+    .card:nth-child(6){background:#669bbc;}
+    .card:nth-child(7){background:#669bbc;}
+    .card:nth-child(8){background:#669bbc;}
+    .card:nth-child(9){background:#669bbc;}
+    .card:nth-child(10){background:#669bbc;}
+
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.6rem;
+      font-weight:bold;
+    }
+    .card p{
+      font-size:0.1rem;
+      line-height:1.6;
+    }
+
+    /* Big Gradient Section */
+    .big-gradient{
+      margin-top:60px;
+      height:300px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff;
+      border-radius:20px 20px 0 0;
+      background:linear-gradient(90deg,#ef4444,#3b82f6,#22c55e,#eab308,#a855f7,#f97316,#14b8a6);
+    }
+
+    /* Unique Footer */
+    footer{
+      background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+      color:#fff;
+      padding:50px 20px 20px;
+    }
+    .footer-container{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+    }
+    .footer-container h3{
+      margin-bottom:15px;
+      font-size:1.3rem;
+      border-bottom:2px solid #38bdf8;
+      display:inline-block;
+      padding-bottom:5px;
+    }
+    .footer-container p, 
+    .footer-container a{
+      color:#e2e8f0;
+      font-size:.95rem; 
+      line-height:1.6;
+      text-decoration:none;
+      transition:color .3s;
+    }
+    .footer-container a:hover{
+      color:#38bdf8;
+    }
+    .social-icons{
+      display:flex;
+      gap:15px;
+      margin-top:15px;
+    }
+    .social-icons a{
+      background:#334155;
+      color:#fff;
+      padding:10px;
+      border-radius:50%;
+      display:inline-block;
+      transition:background .3s;
+    }
+    .social-icons a:hover{
+      background:#38bdf8;
+    }
+    .footer-bottom{
+      text-align:center;
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,0.2);
+      font-size:.9rem;
+      color:#94a3b8;
+    }
+
+
+	  /*     Responsive for small screens 
+     */
+    @media (max-width: 500px) {
+      .image{
+        width: 90%;
+        padding: 16px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
 <body>
-<div class="ad-container">
+  <nav class="navbar">
+  <!-- Checkbox for toggle -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">☰ Menu</label>
 
-<!--             Destination: https://otieu.com/4/9856399
- -->
-<script>
-        function redirectToURL() {
-            
-            window.location.href = "https://otieu.com/4/9856399";
-        }
-    </script>
-  <div>
-    <button class="redirect-button" onclick="redirectToURL()">Applying Now</button></div>
-        </div>
+  <!-- Menu Items -->
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Aus.html">Australia</a></li>
+    <li><a href="canada.html">Canada</a></li>
+    <li><a href="UK.html">UK</a></li>
+    <li><a href="romania.html">Romania</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+  <br>
+
+	<br>
+ <section class="hero">
+    <h2>JOB IN UK, AUSTRALIA, ROMANIA</h2>
+
+  </section>
+	
   
+  <div class="container">
+   
+    <div class="card"><p><h3>Computer Operator</h3>
+
+<b>Company:</b>Consilium Professional Notary Society<br>
+<b>Skills:</b> Document drafting, attention to detail, legal terminology knowledge<br>
+<b>Experience:</b> Previous work in notarial document preparation preferred<br>
+<b>Qualification:</b> Experience in drafting notarial legal documents<br>
+<b>Last Date:</b> ASAP Depends on your qualifications<br>
+ <h3>Country: Romania</h3>
+
+    </p></div>
+
+
+
+    
+ <div class="card"><p><h3>Planner / Programmer</h3>
+
+<b>Company:</b>Hays<br>
+<b>Skills:</b>Project planning, budget management<br>
+<b>Job Location:</b> Melbourne CBD, Victoria, Australia<br>
+<b>Experience:</b>Project planning and management in construction (fitout/interiors preferred)<br>
+<b>Qualification:</b>Bachelor’s degree in Construction Management, Engineering, or similar <br>
+<b>Salary:</b> (≈ $52 – $72 per hour)<br>
+<h3>Country:Australia </h3>
+ </p></div>    
+
+
+    
+  <div class="card"><p><h3>Baker</h3>
+
+<b>Company:</b>BAO Sandwich Bar<br>
+<b>Skills:</b> Baking, decorating, supervision, organizing, teamwork<br>
+<b>Job Location:</b> Waterloo, Ontario<br>
+<b>Experience:</b>1 to 7 months<br>
+<b>Qualification:</b>College Certificate (3 months to less than 1 year) or experience <br>
+<b>Salary:</b>$22 per hour (about $34,320 to $45,760 per year)<br>
+<h3>Country: Canada</h3>
+
+  </p></div>
+
+
+ <div class="card">
+ <p><h3>Factory Workers</h3>
+<b>Company:</b>HR GO Recruitment<br>
+<b>Job Location:</b>Dover, UK. <br>
+<b>Salary:</b>£12.82 per hour (About £26,666 per year if full time)<br>
+<h3>Country:UK</h3> 
+ </p></div> 
+        
+   <div class="card">
+     <p><h3>Warehouse Operator</h3>
+<b>Company:</b>Mango Solutions Limited.<br>
+<b>Job Location:</b>  Romford, Essex .<br>
+<b>Experience:</b> 1 year to less than 2 years<br>
+<b>Salary:</b>£12.21 per hour<br>
+<h3>Country:Uk</h3>
+   
+   </p></div>
+    
+
+
+    <div class="card">
+      <p><h3>Machinery Supervisor</h3>
+<b>Company:</b>Zerella Fresh<br>
+<b>Skills:</b> Machinery supervision, maintenance, quality checks<br>
+<b>Job Location:</b> Parilla, South Australia, Australia<br>
+<b>Experience:</b>Not mentioned<br>
+<b>Qualification:</b>Not mentioned <br>
+<b>Salary:</b>$26.63 per hour (≈ $52,380 per year for 38 hrs/week)<br>
+<h3>Country:Australia </h3>
+
+	   
+	   </p></div>  
+    
+
+
+   <div class="card"><p><h3>Office Administrator</h3>
+<b>Company:</b>Ace Homes<br>
+<b>Skills:</b>Good communication, organized, reliable, attention to detail<br>
+<b>Job Location:</b>Calgary, Alberta<br>
+<b>Experience:</b>1 to 2 years<br>
+<b>Qualification:</b>High School Certificate <br>
+<b>Salary:</b>$27 per hour (about $49,140 to $56,160 per year)<br>
+<h3>Country: Canada</h3>
+   
+   </p></div>
+
+
+
+      <div class="card"><p><h3>Laboratory Assistant</h3>
+
+<b>Company:</b>SC GRAL MEDICAL SRL<br>
+<b>Skills:</b> Sample processing, use of hematology/biochemistry<br>
+<b>Job Location:</b> Bucharest, Romania<br>
+<b>Experience:</b> Previous medical assistant experience preferred<br>
+<b>Qualification:</b> Post-secondary school or specialized faculty in medical field<br>
+<h3>Country: Romania</h3>
+	  </p></div>
+
+
+
+
+     <div class="card"><p><h3>Planner / Programmer</h3>
+<b>Company:</b>Hays<br>
+<b>Skills:</b>Project planning, budget management<br>
+<b>Job Location:</b> Melbourne CBD, Victoria, Australia<br>
+<b>Experience:</b>Project planning and management in construction<br>
+<b>Qualification:</b>Bachelor’s degree in Construction Management <br>
+<b>Salary:</b> (≈ $52 – $72 per hour)<br>
+<h3>Country:Australia </h3>
+	 </p></div>    
+        
+
+
+    <div class="card"><p><h3>Tractor Operator</h3>
+<b>Company:</b>Category 5 Labour Management<br>
+<b>Skills:</b>Tractor operation, Drivers Licence (HR preferred)<br>
+<b>Job Location:</b>Collie, Western Australia<br>
+<b>Experience:</b>Tractor operation experience <br>
+<b>Qualification:</b> Valid Construction Card <br>
+<b>Salary:</b>Not mentioned (Casual role, weekly pay with allowances)<br>
+<h3>Country:Australia </h3>
+	</p></div>   
+    
+  </div>
+
+
+
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>About Us</h3>
+        <p>We help people find safe and trusted jobs in other countries. Our website shares job openings from good companies around the world. Whether you have skills or are just starting, we guide you step by step. Your success abroad is important to us.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="Aus.html">Australia Jobs</a></p>
+        <p><a href="canada.html">Canada Jobs</a></p>
+        <p><a href="UK.html">UK Jobs</a></p>
+        <p><a href="romania.html">Romania Jobs</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+        
+      <div>
+        <h3>Contact</h3>
+        <p>Email: jobsone21<br>@gmail.com</p>
+        <p><a href="term.html">Term and Condition</a></p>
+        <p><a href="privacy.html">Privacy</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 My Website | All rights reserved
+    </div>
+  </footer>
 </body>
-  </html>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
